@@ -4,6 +4,7 @@ import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.BMWAbst
 import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.HondaAbstractFactory;
 import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.VehicleAbstract;
 import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.VehicleAbstractFactory;
+import org.Patterns.creationalDesignPattern.builderDesignPattern.Car2;
 import org.Patterns.creationalDesignPattern.factoryDesignPattern.Vehicle;
 import org.Patterns.creationalDesignPattern.factoryDesignPattern.VehicleFactory;
 
@@ -31,6 +32,11 @@ public class App
         bmw.stop();
         System.out.println("    ");
         //Builder Design pattern
+        Car2.CarBuilder builder= new Car2.CarBuilder();
+        Car2 car1=builder.setEngine("VB").setColor("Black").setSeats(4).build();
+        System.out.println(car1);
+        Car2 car2=builder.setEngine("roylce").setColor("Blue").setSeats(3).build();
+        System.out.println(car2);
 
 
 
