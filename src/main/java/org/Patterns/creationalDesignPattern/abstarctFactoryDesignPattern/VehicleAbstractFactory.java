@@ -1,4 +1,4 @@
-package org.spring.creationalDesignPattern.abstarctFactoryDesignPattern;
+package org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern;
 
 public interface VehicleAbstractFactory {
     VehicleAbstract createVehicle();

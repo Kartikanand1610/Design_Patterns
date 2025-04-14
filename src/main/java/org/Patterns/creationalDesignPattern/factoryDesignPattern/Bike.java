@@ -1,4 +1,4 @@
-package org.spring.creationalDesignPattern.factoryDesignPattern;
+package org.Patterns.creationalDesignPattern.factoryDesignPattern;
 
 public class Bike implements Vehicle{
     public void move(){
