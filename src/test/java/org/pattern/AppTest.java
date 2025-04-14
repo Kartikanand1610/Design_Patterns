@@ -1,4 +1,4 @@
-package org.spring;
+package org.pattern;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
