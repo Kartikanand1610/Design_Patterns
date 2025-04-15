@@ -6,9 +6,9 @@ public class SingletonThreadSafe {
 
     }
     public static SingletonThreadSafe getInstance(){
-        if(single!=null){
+        if(single==null){
             synchronized(SingletonThreadSafe.class){
-                if(single!=null){
+                if(single==null){
                     single=new SingletonThreadSafe();
                 }
             }
