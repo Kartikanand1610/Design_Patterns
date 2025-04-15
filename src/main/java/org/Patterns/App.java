@@ -7,6 +7,9 @@ import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.Vehicle
 import org.Patterns.creationalDesignPattern.builderDesignPattern.Car2;
 import org.Patterns.creationalDesignPattern.factoryDesignPattern.Vehicle;
 import org.Patterns.creationalDesignPattern.factoryDesignPattern.VehicleFactory;
+import org.Patterns.creationalDesignPattern.singeltonDesignPattern.SingletonEager;
+import org.Patterns.creationalDesignPattern.singeltonDesignPattern.SingletonLazy;
+import org.Patterns.creationalDesignPattern.singeltonDesignPattern.SingletonThreadSafe;
 
 
 public class App 
@@ -38,6 +41,19 @@ public class App
         Car2 car2=builder.setEngine("roylce").setColor("Blue").setSeats(3).build();
         System.out.println(car2);
 
+        System.out.println("    ");
+        //Singleton design pattern
+        //singleton eager initialization
+        SingletonEager singelton= SingletonEager.getInstance();
+        singelton.showMessage();
+        System.out.println("   ");
+        //singleton lazy initialization
+        SingletonLazy singletonLazy= SingletonLazy.getInstance();
+        singletonLazy.showMessageLazy();
+        System.out.println("     ");
+        //singelton thread safe doublechecked method
+        SingletonThreadSafe single=SingletonThreadSafe.getInstance();
+        single.showMessage();
 
 
 
