@@ -7,8 +7,6 @@
     <list default="true" id="14394be8-e458-44a5-be44-870b7f307f73" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Patterns/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Patterns/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Patterns/creationalDesignPattern/singeltonDesignPattern/SingletonThreadSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Patterns/creationalDesignPattern/singeltonDesignPattern/SingletonThreadSafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/Patterns/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Patterns/App.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

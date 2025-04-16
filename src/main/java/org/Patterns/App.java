@@ -1,5 +1,7 @@
 package org.Patterns;
 
+import org.Patterns.behavioralDesignPattern.ObserverDesignPattern.YoutubeChannelImpl;
+import org.Patterns.behavioralDesignPattern.ObserverDesignPattern.YoutubeSubscriber;
 import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.BMWAbstractFactory;
 import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.HondaAbstractFactory;
 import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.VehicleAbstract;
@@ -16,7 +18,9 @@ import org.Patterns.creationalDesignPattern.singeltonDesignPattern.SingletonThre
 
 public class App 
 {
-    public static void main( String[] args ) throws CloneNotSupportedException {  //Factory Creational pattern
+    public static void main( String[] args ) throws CloneNotSupportedException {
+        //Structural Design Pattern
+        //Factory Creational pattern
         Vehicle vehicle1= VehicleFactory.getVehicle("Car");
         vehicle1.move();
         vehicle1.stop();
@@ -78,7 +82,21 @@ public class App
         p1.showInfo();
         p2.showInfo();
 
+        //Behavioural design pattern
+        //Observer Design Patterns
+        //create a YouTube channel
+        YoutubeChannelImpl channel=new YoutubeChannelImpl();
+        //create subscriber
+        YoutubeSubscriber alice=new YoutubeSubscriber("Alice");
+        YoutubeSubscriber bob =new YoutubeSubscriber("Bob");
+        //subscribe to the channel
+        channel.addSubscriber(alice);
+        channel.addSubscriber(bob);
+        //upload a new video and notify subscribers
+        channel.uploadNewVideo(" Java design patterns tutorial");
 
+        channel.removeSubscriber(bob);
+        channel.uploadNewVideo(" Observer Pattern in Action");
 
 
 
