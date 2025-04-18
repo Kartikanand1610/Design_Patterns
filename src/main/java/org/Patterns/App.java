@@ -2,6 +2,10 @@ package org.Patterns;
 
 import org.Patterns.behavioralDesignPattern.ObserverDesignPattern.YoutubeChannelImpl;
 import org.Patterns.behavioralDesignPattern.ObserverDesignPattern.YoutubeSubscriber;
+import org.Patterns.behavioralDesignPattern.StrategyDesignPattern.CreditCard;
+import org.Patterns.behavioralDesignPattern.StrategyDesignPattern.DebitCard;
+import org.Patterns.behavioralDesignPattern.StrategyDesignPattern.PaymentProcessor;
+import org.Patterns.behavioralDesignPattern.StrategyDesignPattern.PaymentStrategy;
 import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.BMWAbstractFactory;
 import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.HondaAbstractFactory;
 import org.Patterns.creationalDesignPattern.abstarctFactoryDesignPattern.VehicleAbstract;
@@ -97,6 +101,15 @@ public class App
 
         channel.removeSubscriber(bob);
         channel.uploadNewVideo(" Observer Pattern in Action");
+        System.out.println("     ");
+
+        // Strategy Design pattern
+        PaymentStrategy creditcard= new CreditCard();
+        PaymentStrategy debitcard=new DebitCard();
+        PaymentProcessor paymentprocessor=new PaymentProcessor(creditcard);
+        paymentprocessor.processPayment();
+        paymentprocessor.setPaymentStrategy(debitcard);
+        paymentprocessor.processPayment();
 
 
 
